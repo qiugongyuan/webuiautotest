@@ -3,7 +3,7 @@ import os,time
 
 driver=webdriver.Chrome()
 
-filepath=''+os.path.abspath('HT/checkbox.html')
+filepath=''+os.path.abspath('../HT/checkbox.html')
 print (filepath)
 #方法一
 driver.get(filepath)
