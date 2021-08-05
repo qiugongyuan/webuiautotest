@@ -28,3 +28,4 @@ for user in users:
     time.sleep(3)
     driver.find_element_by_id('logout').click()
     driver.quit()
+
