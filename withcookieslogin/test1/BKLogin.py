@@ -6,6 +6,14 @@ url = 'https://account.cnblogs.com/signin'
 driver = webdriver.Chrome()
 driver.get(url)
 driver.maximize_window()
+cookiebefore=driver.get_cookies()
+fileNamePath = os.path.split(os.path.realpath(__file__))[0]
+yamlPath1 = os.path.join(fileNamePath, 'config3.yaml')
+# 以覆盖写入打开文件
+fw = open(yamlPath1,'w',encoding='utf-8')
+data3={"cookiesbefore":cookiebefore}
+yaml.dump(data3,fw)
+
 time.sleep(2)
 driver.find_element_by_xpath('//*[@id="mat-input-0"]').clear()
 driver.find_element_by_xpath('//*[@id="mat-input-0"]').send_keys("360960443@qq.com")
